@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0c0c1a" />
 
-  <title>Rapcheck.de – Deutschrap & Rap News, Releases & Updates</title>
+  <title>Rapcheck.de – Rap News als YouTube Shorts</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Rapcheck.de liefert aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt aus der Szene. Videos & Shorts findest du hier im Überblick." />
-  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Deutschrap Releases, Rapcheck, Rap Updates, Deutschrap, Shorts" />
+  <!-- Primary SEO -->
+  <meta name="description" content="Rapcheck.de liefert aktuelle Deutschrap- und Rap News, Releases und Updates – als YouTube Shorts, kurz, schnell und direkt." />
+  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Deutschrap Releases, Rapcheck, YouTube Shorts, Rap Shorts, Deutschrap Updates" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://rapcheck.de/" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph (WhatsApp/Instagram/Facebook/Discord) -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Rapcheck.de" />
-  <meta property="og:title" content="Rapcheck.de – Rap News, Releases & Updates" />
-  <meta property="og:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – plus die neuesten Videos & Shorts." />
+  <meta property="og:title" content="Rapcheck.de – Rap News als YouTube Shorts" />
+  <meta property="og:description" content="Aktuelle Rap News, Releases und Updates – als YouTube Shorts. Kurz. Schnell. Direkt." />
   <meta property="og:url" content="https://rapcheck.de/" />
   <meta property="og:image" content="https://rapcheck.de/og-image.jpg" />
 
   <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rapcheck.de – Rap News, Releases & Updates" />
-  <meta name="twitter:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – plus die neuesten Videos & Shorts." />
+  <meta name="twitter:title" content="Rapcheck.de – Rap News als YouTube Shorts" />
+  <meta name="twitter:description" content="Aktuelle Rap News, Releases und Updates – als YouTube Shorts. Kurz. Schnell. Direkt." />
   <meta name="twitter:image" content="https://rapcheck.de/og-image.jpg" />
 
   <!-- Structured Data -->
@@ -57,7 +57,6 @@
     :root{
       --card: rgba(255,255,255,0.06);
       --line: rgba(255,255,255,0.14);
-      --text: #fff;
       --muted: rgba(255,255,255,0.78);
       --shadow: 0 30px 80px rgba(0,0,0,0.35);
       --radius: 22px;
@@ -66,7 +65,7 @@
     body{
       margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
+      color:#fff;
       background:
         radial-gradient(900px 600px at 15% 20%, rgba(255,42,42,0.25), transparent 55%),
         radial-gradient(900px 600px at 85% 25%, rgba(139,92,246,0.22), transparent 55%),
@@ -107,7 +106,7 @@
       -webkit-user-drag:none;
       pointer-events:none;
     }
-    .logo strong{font-size:18px; letter-spacing:0.2px;}
+    .logo strong{font-size:18px;}
     .logo small{opacity:0.75;}
 
     .social a{
@@ -146,10 +145,7 @@
     .hero h1{font-size:42px; margin:0 0 14px; letter-spacing:-0.5px;}
     .hero p{margin:0; opacity:0.9; line-height:1.6; max-width:72ch;}
 
-    .buttons{
-      margin-top:22px;
-      display:flex; gap:12px; flex-wrap:wrap;
-    }
+    .buttons{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap;}
     .buttons a{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 18px;
@@ -177,7 +173,6 @@
     .card h3{margin:0 0 8px; font-size:16px;}
     .card p{margin:0; opacity:0.85; line-height:1.55; font-size:13px;}
 
-    /* Section blocks */
     .section{
       margin-top:18px;
       background:rgba(255,255,255,0.05);
@@ -192,12 +187,12 @@
     }
     .muted{color:var(--muted); line-height:1.6;}
 
-    /* Accordion */
+    /* Accordion SEO */
     details{
       border:1px solid rgba(255,255,255,0.14);
       border-radius:16px;
       background:rgba(0,0,0,0.18);
-      padding:14px 14px;
+      padding:14px;
     }
     summary{
       cursor:pointer;
@@ -209,13 +204,13 @@
       gap:12px;
     }
     summary::-webkit-details-marker{display:none;}
-    .chev{opacity:.8; font-weight:900;}
+    .chev{opacity:.8; font-weight:900; transition: transform .15s ease;}
     details[open] .chev{transform: rotate(180deg);}
     .seoText{margin-top:10px; color:var(--muted); line-height:1.7;}
     .seoText h3{margin:12px 0 6px; color:#fff; font-size:14px;}
     .seoText ul{margin:8px 0 0 18px;}
 
-    /* Carousel */
+    /* Carousel (YouTube Shorts) */
     .carouselHeader{
       display:flex;
       align-items:center;
@@ -253,6 +248,8 @@
       overflow:hidden;
       border:1px solid rgba(255,255,255,0.14);
       background:rgba(0,0,0,0.18);
+      text-decoration:none;
+      color:#fff;
     }
     .thumb{
       width:100%;
@@ -265,7 +262,6 @@
       margin:0;
       font-size:13px;
       line-height:1.35;
-      color:#fff;
       opacity:.95;
       max-height:2.7em;
       overflow:hidden;
@@ -290,6 +286,7 @@
 <body>
   <div class="header">
     <div class="logo">
+      <!-- Logo liegt bei dir im Root: raplogo.png -->
       <img src="raplogo.png" alt="Rapcheck Logo">
       <div>
         <strong>Rapcheck.de</strong><br>
@@ -309,7 +306,7 @@
       <h1>Dein schneller Check für Rap.</h1>
       <p>
         Rapcheck.de bringt dir aktuelle <strong>Deutschrap</strong>- und <strong>Rap News</strong>, neue <strong>Releases</strong> und kurze Updates –
-        kompakt, schnell und direkt aus der Szene. Die neuesten Videos findest du direkt hier.
+        kompakt, schnell und direkt aus der Szene. Die neuesten <strong>YouTube Shorts</strong> findest du direkt hier.
       </p>
 
       <div class="buttons">
@@ -333,29 +330,29 @@
         </div>
       </div>
 
-      <!-- YouTube Carousel (auto from RSS) -->
-      <div class="section" aria-label="Neueste Videos">
+      <!-- YouTube Shorts Feed (auto) -->
+      <div class="section" aria-label="Neueste YouTube Shorts">
         <div class="carouselHeader">
-          <h2>Neueste Videos</h2>
+          <h2>Neueste Shorts</h2>
           <div class="carouselBtns">
-            <button class="cbtn" type="button" onclick="scrollRail(-1)">←</button>
-            <button class="cbtn" type="button" onclick="scrollRail(1)">→</button>
+            <button class="cbtn" type="button" id="btnLeft" aria-label="Nach links">←</button>
+            <button class="cbtn" type="button" id="btnRight" aria-label="Nach rechts">→</button>
           </div>
         </div>
 
         <p class="muted" style="margin-top:0;">
-          Hier erscheinen automatisch deine neuesten YouTube Uploads. (Shorts funktionieren ebenfalls.)
+          Deine neuesten Uploads werden automatisch geladen. Shorts werden bevorzugt angezeigt (wenn im Titel z.B. „Shorts/#shorts“ erkennbar ist).
         </p>
 
-        <div class="rail" id="rail" aria-label="Video Slider"></div>
+        <div class="rail" id="rail" aria-label="Shorts Slider"></div>
 
         <p class="muted" style="margin:12px 0 0;">
-          
-          <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">@rapcheck</a>
+          Mehr? Schau direkt auf dem Kanal vorbei:
+          <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">@Rapcheck</a>
         </p>
       </div>
 
-      <!-- Accordion SEO -->
+      <!-- SEO Accordion -->
       <div class="section" aria-label="Über Rapcheck">
         <details>
           <summary>
@@ -372,7 +369,7 @@
             <ul>
               <li><strong>Rap News:</strong> Entwicklungen, Trends und Diskussionen aus der Szene</li>
               <li><strong>Releases:</strong> Neue Songs, Alben und Musikvideos – kurz zusammengefasst</li>
-              <li><strong>Video-Updates:</strong> Die neuesten Uploads direkt auf dieser Seite</li>
+              <li><strong>YouTube Shorts:</strong> Die neuesten Updates direkt auf dieser Seite</li>
             </ul>
 
             <h3>Folge Rapcheck</h3>
@@ -391,42 +388,60 @@
   </div>
 
   <script>
-    // Jahr automatisch
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // ---- YouTube auto-feed via RSS -> JSON proxy (no key, no backend) ----
-    // NOTE: This uses a public RSS-to-JSON helper. If it ever fails, we can switch to YouTube API later.
-    const YT_CHANNEL_ID = "UCdJUFxC2vb7xDAa5M-Mvi_A"; // )
-    const RSS_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCdJUFxC2vb7xDAa5M-Mvi_A" + encodeURIComponent(YT_CHANNEL_ID);
+    // ===== YouTube feed (auto) =====
+    // Channel ID already set:
+    const YT_CHANNEL_ID = "UCdJUFxC2vb7xDAa5M-Mvi_A";
+    const RSS_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=" + encodeURIComponent(YT_CHANNEL_ID);
 
-    // Using a public proxy to avoid CORS issues in browsers:
-    const API = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS_URL);
+    // Public RSS->JSON helper to bypass CORS (simple setup, no API key).
+    const API = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS_URL) + "&count=25";
 
     const rail = document.getElementById("rail");
+    const btnLeft = document.getElementById("btnLeft");
+    const btnRight = document.getElementById("btnRight");
 
     function esc(s){
-      return String(s||"").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+      return String(s||"").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
     }
 
     function getYouTubeId(link){
-      // link often like https://www.youtube.com/watch?v=VIDEOID
       try{
         const u = new URL(link);
         return u.searchParams.get("v");
       }catch(e){ return null; }
     }
 
+    function looksLikeShort(item){
+      const title = (item.title || "").toLowerCase();
+      const link = (item.link || "").toLowerCase();
+      // Heuristic: #shorts / shorts keyword
+      return title.includes("#shorts") || title.includes("shorts") || link.includes("/shorts/");
+    }
+
+    function buildTile({href, thumb, title, date}){
+      return `
+        <a class="tile" href="${href}" target="_blank" rel="noopener">
+          <img class="thumb" src="${thumb}" alt="${title}">
+          <div class="tileBody">
+            <p class="tileTitle">${title}</p>
+            <p class="tileMeta">${date}</p>
+          </div>
+        </a>
+      `;
+    }
+
     async function loadYouTube(){
-      if (YT_CHANNEL_ID === "UCdJUFxC2vb7xDAa5M-Mvi_A"){
-        rail.innerHTML = `
-          <div class="tile">
-            <div class="tileBody">
-              <p class="tileTitle"><strong>Fast fertig:</strong> </p>
-              <p class="tileMeta"></code> (UC...)</p>
-            </div>
-          </div>`;
-        return;
-      }
+      rail.innerHTML = `
+        <div class="tile">
+          <div class="tileBody">
+            <p class="tileTitle"><strong>Loading…</strong></p>
+            <p class="tileMeta">Shorts werden geladen.</p>
+          </div>
+        </div>
+      `;
 
       try{
         const res = await fetch(API, {cache:"no-store"});
@@ -437,43 +452,51 @@
           return;
         }
 
-        const items = data.items.slice(0, 12); // letzte 12 Videos
-        rail.innerHTML = items.map(item => {
+        // Prefer shorts-like items first, then fill up with newest uploads
+        const items = data.items.slice(0, 25);
+        const shorts = items.filter(looksLikeShort);
+        const others = items.filter(i => !looksLikeShort(i));
+
+        const ordered = shorts.concat(others).slice(0, 12);
+
+        rail.innerHTML = ordered.map(item => {
           const vid = getYouTubeId(item.link);
           const title = esc(item.title);
           const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString("de-DE") : "";
           const thumb = item.thumbnail || (vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : "");
           const href = vid ? `https://www.youtube.com/watch?v=${vid}` : item.link;
 
-          return `
-            <a class="tile" href="${href}" target="_blank" rel="noopener" style="text-decoration:none;">
-              <img class="thumb" src="${thumb}" alt="${title}">
-              <div class="tileBody">
-                <p class="tileTitle">${title}</p>
-                <p class="tileMeta">${date}</p>
-              </div>
-            </a>
-          `;
+          return buildTile({href, thumb, title, date});
         }).join("");
 
       }catch(err){
-        rail.innerHTML = `<div class="tile"><div class="tileBody"><p class="tileTitle">Feed konnte gerade nicht geladen werden.</p><p class="tileMeta">Kein Problem – später können wir YouTube API nutzen.</p></div></div>`;
+        rail.innerHTML = `
+          <div class="tile">
+            <div class="tileBody">
+              <p class="tileTitle">Shorts konnten gerade nicht geladen werden.</p>
+              <p class="tileMeta">Bitte später erneut versuchen.</p>
+            </div>
+          </div>
+        `;
       }
     }
 
+    // Carousel controls
     function scrollRail(dir){
       const amount = 340 * dir;
       rail.scrollBy({left: amount, behavior: "smooth"});
     }
+    btnLeft.addEventListener("click", () => scrollRail(-1));
+    btnRight.addEventListener("click", () => scrollRail(1));
 
     loadYouTube();
 
-    // UX-Hürde: Rechtsklick/Drag/Markieren blocken
+    // ===== UX Hürde: Rechtsklick/Drag/Markieren blocken =====
     document.addEventListener("contextmenu", (e) => e.preventDefault());
     document.addEventListener("dragstart", (e) => e.preventDefault());
     document.addEventListener("selectstart", (e) => e.preventDefault());
 
-    // UX-Hürde: gängige Shortcuts blocken
+    // ===== UX Hürde: gängige Shortcuts blocken =====
     document.addEventListener("keydown", (e) => {
       const k = (e.key || "").toLowerCase();
       const ctrl = e.ctrlKey || e.metaKey;
