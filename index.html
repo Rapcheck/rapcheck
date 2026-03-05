@@ -7,9 +7,9 @@
 
   <title>Rapcheck.de – Deutschrap & Rap News, Releases & Updates</title>
 
-  <!-- Primary SEO -->
-  <meta name="description" content="Rapcheck.de liefert aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt aus der Szene." />
-  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Deutschrap Releases, Rapcheck, Rap Updates, Deutschrap" />
+  <!-- SEO -->
+  <meta name="description" content="Rapcheck.de liefert aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt aus der Szene. Videos & Shorts findest du hier im Überblick." />
+  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Deutschrap Releases, Rapcheck, Rap Updates, Deutschrap, Shorts" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://rapcheck.de/" />
 
@@ -17,19 +17,18 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Rapcheck.de" />
-  <meta property="og:title" content="Rapcheck.de – Deutschrap & Rap News, Releases & Updates" />
-  <meta property="og:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt." />
+  <meta property="og:title" content="Rapcheck.de – Rap News, Releases & Updates" />
+  <meta property="og:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – plus die neuesten Videos & Shorts." />
   <meta property="og:url" content="https://rapcheck.de/" />
-  <!-- Optional: Wenn du später ein OG-Bild (1200x630) hochlädst, nenn es og-image.jpg -->
   <meta property="og:image" content="https://rapcheck.de/og-image.jpg" />
 
   <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rapcheck.de – Deutschrap & Rap News, Releases & Updates" />
-  <meta name="twitter:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt." />
+  <meta name="twitter:title" content="Rapcheck.de – Rap News, Releases & Updates" />
+  <meta name="twitter:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – plus die neuesten Videos & Shorts." />
   <meta name="twitter:image" content="https://rapcheck.de/og-image.jpg" />
 
-  <!-- Structured data (Google) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -55,17 +54,23 @@
   </script>
 
   <style>
+    :root{
+      --card: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.14);
+      --text: #fff;
+      --muted: rgba(255,255,255,0.78);
+      --shadow: 0 30px 80px rgba(0,0,0,0.35);
+      --radius: 22px;
+    }
+
     body{
       margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      color:white;
-
-      /* Rap Neon Background */
+      color: var(--text);
       background:
         radial-gradient(900px 600px at 15% 20%, rgba(255,42,42,0.25), transparent 55%),
         radial-gradient(900px 600px at 85% 25%, rgba(139,92,246,0.22), transparent 55%),
         linear-gradient(120deg,#0c0c1a,#120008);
-
       min-height:100vh;
       overflow-x:hidden;
     }
@@ -91,16 +96,9 @@
       position:relative;
       z-index:1;
     }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-
+    .logo{display:flex; align-items:center; gap:14px;}
     .logo img{
-      height:62px;
-      width:auto;
+      height:62px; width:auto;
       border-radius:12px;
       background:rgba(255,255,255,0.06);
       border:1px solid rgba(255,255,255,0.16);
@@ -109,15 +107,8 @@
       -webkit-user-drag:none;
       pointer-events:none;
     }
-
-    .logo strong{
-      font-size:18px;
-      letter-spacing:0.2px;
-    }
-
-    .logo small{
-      opacity:0.75;
-    }
+    .logo strong{font-size:18px; letter-spacing:0.2px;}
+    .logo small{opacity:0.75;}
 
     .social a{
       margin-left:10px;
@@ -133,11 +124,7 @@
       position:relative;
       z-index:1;
     }
-
-    .social a:hover{
-      transform: translateY(-1px);
-      background:rgba(255,255,255,0.10);
-    }
+    .social a:hover{transform: translateY(-1px); background:rgba(255,255,255,0.10);}
 
     .container{
       max-width:1100px;
@@ -148,104 +135,145 @@
     }
 
     .hero{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.14);
-      border-radius:22px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
       padding:38px 28px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
     }
 
-    .hero h1{
-      font-size:42px;
-      margin:0 0 14px;
-      letter-spacing:-0.5px;
-    }
-
-    .hero p{
-      margin:0;
-      opacity:0.9;
-      line-height:1.6;
-      max-width:70ch;
-    }
+    .hero h1{font-size:42px; margin:0 0 14px; letter-spacing:-0.5px;}
+    .hero p{margin:0; opacity:0.9; line-height:1.6; max-width:72ch;}
 
     .buttons{
       margin-top:22px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+      display:flex; gap:12px; flex-wrap:wrap;
     }
-
     .buttons a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+      display:inline-flex; align-items:center; justify-content:center;
       padding:12px 18px;
       border-radius:14px;
-      color:white;
-      text-decoration:none;
+      color:white; text-decoration:none;
       border:1px solid rgba(255,255,255,0.16);
       background:rgba(255,255,255,0.06);
       transition: transform .15s ease, background .15s ease;
       font-weight:700;
-      letter-spacing:0.1px;
     }
-
     .buttons a.primary{
       background: linear-gradient(135deg, rgba(255,42,42,0.95), rgba(139,92,246,0.85));
       border-color: rgba(255,255,255,0.14);
     }
+    .buttons a:hover{transform: translateY(-1px); background:rgba(255,255,255,0.10);}
 
-    .buttons a:hover{
-      transform: translateY(-1px);
-      background:rgba(255,255,255,0.10);
-    }
-
-    .cards{
-      display:flex;
-      gap:16px;
-      margin-top:28px;
-      flex-wrap:wrap;
-    }
-
+    .cards{display:flex; gap:16px; margin-top:28px; flex-wrap:wrap;}
     .card{
-      flex:1;
-      min-width:240px;
+      flex:1; min-width:240px;
       background:rgba(0,0,0,0.20);
-      border:1px solid rgba(255,255,255,0.14);
+      border:1px solid var(--line);
       padding:18px;
       border-radius:18px;
     }
+    .card h3{margin:0 0 8px; font-size:16px;}
+    .card p{margin:0; opacity:0.85; line-height:1.55; font-size:13px;}
 
-    .card h3{
-      margin:0 0 8px;
-      font-size:16px;
-    }
-
-    .card p{
-      margin:0;
-      opacity:0.85;
-      line-height:1.55;
-      font-size:13px;
-    }
-
-    /* SEO Content Block */
-    .seo{
-      margin-top:22px;
+    /* Section blocks */
+    .section{
+      margin-top:18px;
       background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.14);
+      border:1px solid var(--line);
       border-radius:18px;
-      padding:22px;
-      line-height:1.65;
+      padding:20px;
     }
-    .seo h2{ margin:0 0 10px; font-size:22px; }
-    .seo h3{ margin:18px 0 8px; font-size:16px; opacity:0.95; }
-    .seo p{ margin:0 0 10px; opacity:0.9; }
-    .seo ul{ margin:10px 0 0 18px; opacity:0.9; }
-    .seo a{ color:#fff; text-decoration:underline; }
+    .section h2{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:-0.2px;
+    }
+    .muted{color:var(--muted); line-height:1.6;}
+
+    /* Accordion */
+    details{
+      border:1px solid rgba(255,255,255,0.14);
+      border-radius:16px;
+      background:rgba(0,0,0,0.18);
+      padding:14px 14px;
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none;}
+    .chev{opacity:.8; font-weight:900;}
+    details[open] .chev{transform: rotate(180deg);}
+    .seoText{margin-top:10px; color:var(--muted); line-height:1.7;}
+    .seoText h3{margin:12px 0 6px; color:#fff; font-size:14px;}
+    .seoText ul{margin:8px 0 0 18px;}
+
+    /* Carousel */
+    .carouselHeader{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .carouselBtns{display:flex; gap:10px;}
+    .cbtn{
+      border:1px solid rgba(255,255,255,0.18);
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+      border-radius:12px;
+      padding:10px 12px;
+      cursor:pointer;
+      font-weight:800;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .cbtn:hover{transform: translateY(-1px); background:rgba(255,255,255,0.10);}
+
+    .rail{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:6px;
+    }
+    .rail::-webkit-scrollbar{height:8px;}
+    .rail::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.18); border-radius:999px;}
+
+    .tile{
+      flex:0 0 320px;
+      scroll-snap-align:start;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.14);
+      background:rgba(0,0,0,0.18);
+    }
+    .thumb{
+      width:100%;
+      aspect-ratio: 16 / 9;
+      object-fit:cover;
+      display:block;
+    }
+    .tileBody{padding:12px;}
+    .tileTitle{
+      margin:0;
+      font-size:13px;
+      line-height:1.35;
+      color:#fff;
+      opacity:.95;
+      max-height:2.7em;
+      overflow:hidden;
+    }
+    .tileMeta{margin:6px 0 0; font-size:12px; color:rgba(255,255,255,0.7);}
 
     footer{
-      margin-top:22px;
+      margin-top:18px;
       text-align:center;
       opacity:0.65;
       font-size:12px;
@@ -254,6 +282,7 @@
     @media (max-width: 760px){
       .header{flex-direction:column; align-items:flex-start}
       .hero h1{font-size:32px}
+      .tile{flex-basis: 280px;}
     }
   </style>
 </head>
@@ -261,7 +290,6 @@
 <body>
   <div class="header">
     <div class="logo">
-      <!-- Logo liegt bei dir im Root: raplogo.png -->
       <img src="raplogo.png" alt="Rapcheck Logo">
       <div>
         <strong>Rapcheck.de</strong><br>
@@ -281,7 +309,7 @@
       <h1>Dein schneller Check für Rap.</h1>
       <p>
         Rapcheck.de bringt dir aktuelle <strong>Deutschrap</strong>- und <strong>Rap News</strong>, neue <strong>Releases</strong> und kurze Updates –
-        kompakt, schnell und direkt aus der Szene.
+        kompakt, schnell und direkt aus der Szene. Die neuesten Videos findest du direkt hier.
       </p>
 
       <div class="buttons">
@@ -305,29 +333,58 @@
         </div>
       </div>
 
-      <!-- SEO Mini-Content -->
-      <section class="seo">
-        <h2>Was ist Rapcheck.de?</h2>
-        <p>
-          Rapcheck.de ist deine Anlaufstelle für <strong>Deutschrap News</strong>, neue <strong>Releases</strong> und schnelle Updates aus der Rap-Szene.
-          Wir bündeln die wichtigsten Themen kompakt, damit du ohne Umwege informiert bleibst.
+      <!-- YouTube Carousel (auto from RSS) -->
+      <div class="section" aria-label="Neueste Videos">
+        <div class="carouselHeader">
+          <h2>Neueste Videos</h2>
+          <div class="carouselBtns">
+            <button class="cbtn" type="button" onclick="scrollRail(-1)">←</button>
+            <button class="cbtn" type="button" onclick="scrollRail(1)">→</button>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:0;">
+          Hier erscheinen automatisch deine neuesten YouTube Uploads. (Shorts funktionieren ebenfalls.)
         </p>
 
-        <h3>Was du hier findest</h3>
-        <ul>
-          <li><strong>Rap News:</strong> Entwicklungen, Trends und Diskussionen aus der Szene</li>
-          <li><strong>Releases:</strong> Neue Songs, Alben und Musikvideos – kurz zusammengefasst</li>
-          <li><strong>Social Updates:</strong> Highlights von YouTube, Instagram und TikTok</li>
-        </ul>
+        <div class="rail" id="rail" aria-label="Video Slider"></div>
 
-        <h3>Folge Rapcheck</h3>
-        <p>
-          Für die neuesten Inhalte folge uns auf
-          <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener">YouTube</a>,
-          <a href="https://instagram.com/rapcheck" target="_blank" rel="noopener">Instagram</a>
-          und <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener">TikTok</a>.
+        <p class="muted" style="margin:12px 0 0;">
+          TikTok: Automatische „neueste Videos“-Einbindung ist ohne Backend oft unzuverlässig. Du kannst aber jederzeit dein Profil verlinken:
+          <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">@rapcheck</a>
         </p>
-      </section>
+      </div>
+
+      <!-- Accordion SEO -->
+      <div class="section" aria-label="Über Rapcheck">
+        <details>
+          <summary>
+            Was ist Rapcheck.de? (klick)
+            <span class="chev">⌄</span>
+          </summary>
+          <div class="seoText">
+            <p>
+              <strong>Rapcheck.de</strong> ist deine Anlaufstelle für <strong>Deutschrap News</strong>, neue <strong>Releases</strong> und schnelle Updates aus der Rap-Szene.
+              Wir bündeln die wichtigsten Themen kompakt, damit du ohne Umwege informiert bleibst.
+            </p>
+
+            <h3>Was du hier findest</h3>
+            <ul>
+              <li><strong>Rap News:</strong> Entwicklungen, Trends und Diskussionen aus der Szene</li>
+              <li><strong>Releases:</strong> Neue Songs, Alben und Musikvideos – kurz zusammengefasst</li>
+              <li><strong>Video-Updates:</strong> Die neuesten Uploads direkt auf dieser Seite</li>
+            </ul>
+
+            <h3>Folge Rapcheck</h3>
+            <p>
+              Für die neuesten Inhalte folge uns auf
+              <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">YouTube</a>,
+              <a href="https://instagram.com/rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Instagram</a>
+              und <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">TikTok</a>.
+            </p>
+          </div>
+        </details>
+      </div>
 
       <footer>© <span id="year"></span> Rapcheck.de</footer>
     </div>
@@ -336,6 +393,80 @@
   <script>
     // Jahr automatisch
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ---- YouTube auto-feed via RSS -> JSON proxy (no key, no backend) ----
+    // NOTE: This uses a public RSS-to-JSON helper. If it ever fails, we can switch to YouTube API later.
+    const YT_CHANNEL_ID = "vb7xDAa5M-Mvi_A"; // <-- HIER deine Channel-ID eintragen (UC....)
+    const RSS_URL = "https://www.youtube.com/feeds/videos.xml?vb7xDAa5M-Mvi_A" + encodeURIComponent(YT_CHANNEL_ID);
+
+    // Using a public proxy to avoid CORS issues in browsers:
+    const API = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS_URL);
+
+    const rail = document.getElementById("rail");
+
+    function esc(s){
+      return String(s||"").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+    function getYouTubeId(link){
+      // link often like https://www.youtube.com/watch?v=VIDEOID
+      try{
+        const u = new URL(link);
+        return u.searchParams.get("v");
+      }catch(e){ return null; }
+    }
+
+    async function loadYouTube(){
+      if (YT_CHANNEL_ID === "YOUR_CHANNEL_ID"){
+        rail.innerHTML = `
+          <div class="tile">
+            <div class="tileBody">
+              <p class="tileTitle"><strong>Fast fertig:</strong> Bitte trage deine YouTube Channel-ID in den Code ein.</p>
+              <p class="tileMeta">Suche auf YouTube im Seitenquelltext nach <code>channelId</code> (UC...)</p>
+            </div>
+          </div>`;
+        return;
+      }
+
+      try{
+        const res = await fetch(API, {cache:"no-store"});
+        const data = await res.json();
+
+        if (!data.items || !data.items.length){
+          rail.innerHTML = `<div class="tile"><div class="tileBody"><p class="tileTitle">Keine Videos gefunden.</p></div></div>`;
+          return;
+        }
+
+        const items = data.items.slice(0, 12); // letzte 12 Videos
+        rail.innerHTML = items.map(item => {
+          const vid = getYouTubeId(item.link);
+          const title = esc(item.title);
+          const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString("de-DE") : "";
+          const thumb = item.thumbnail || (vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : "");
+          const href = vid ? `https://www.youtube.com/watch?v=${vid}` : item.link;
+
+          return `
+            <a class="tile" href="${href}" target="_blank" rel="noopener" style="text-decoration:none;">
+              <img class="thumb" src="${thumb}" alt="${title}">
+              <div class="tileBody">
+                <p class="tileTitle">${title}</p>
+                <p class="tileMeta">${date}</p>
+              </div>
+            </a>
+          `;
+        }).join("");
+
+      }catch(err){
+        rail.innerHTML = `<div class="tile"><div class="tileBody"><p class="tileTitle">Feed konnte gerade nicht geladen werden.</p><p class="tileMeta">Kein Problem – später können wir YouTube API nutzen.</p></div></div>`;
+      }
+    }
+
+    function scrollRail(dir){
+      const amount = 340 * dir;
+      rail.scrollBy({left: amount, behavior: "smooth"});
+    }
+
+    loadYouTube();
 
     // UX-Hürde: Rechtsklick/Drag/Markieren blocken
     document.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -348,8 +479,8 @@
       const ctrl = e.ctrlKey || e.metaKey;
 
       if (
-        (ctrl && ["c","u","s","p"].includes(k)) ||            // copy, view source, save, print
-        (ctrl && e.shiftKey && ["i","j","c"].includes(k)) ||  // devtools combos
+        (ctrl && ["c","u","s","p"].includes(k)) ||
+        (ctrl && e.shiftKey && ["i","j","c"].includes(k)) ||
         k === "f12"
       ) {
         e.preventDefault();
