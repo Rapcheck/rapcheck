@@ -350,7 +350,7 @@
         <div class="rail" id="rail" aria-label="Video Slider"></div>
 
         <p class="muted" style="margin:12px 0 0;">
-          TikTok: Automatische „neueste Videos“-Einbindung ist ohne Backend oft unzuverlässig. Du kannst aber jederzeit dein Profil verlinken:
+          
           <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">@rapcheck</a>
         </p>
       </div>
@@ -396,8 +396,8 @@
 
     // ---- YouTube auto-feed via RSS -> JSON proxy (no key, no backend) ----
     // NOTE: This uses a public RSS-to-JSON helper. If it ever fails, we can switch to YouTube API later.
-    const YT_CHANNEL_ID = "vb7xDAa5M-Mvi_A"; // <-- HIER deine Channel-ID eintragen (UC....)
-    const RSS_URL = "https://www.youtube.com/feeds/videos.xml?vb7xDAa5M-Mvi_A" + encodeURIComponent(YT_CHANNEL_ID);
+    const YT_CHANNEL_ID = "UCdJUFxC2vb7xDAa5M-Mvi_A"; // )
+    const RSS_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCdJUFxC2vb7xDAa5M-Mvi_A" + encodeURIComponent(YT_CHANNEL_ID);
 
     // Using a public proxy to avoid CORS issues in browsers:
     const API = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS_URL);
@@ -417,12 +417,12 @@
     }
 
     async function loadYouTube(){
-      if (YT_CHANNEL_ID === "YOUR_CHANNEL_ID"){
+      if (YT_CHANNEL_ID === "UCdJUFxC2vb7xDAa5M-Mvi_A"){
         rail.innerHTML = `
           <div class="tile">
             <div class="tileBody">
-              <p class="tileTitle"><strong>Fast fertig:</strong> Bitte trage deine YouTube Channel-ID in den Code ein.</p>
-              <p class="tileMeta">Suche auf YouTube im Seitenquelltext nach <code>channelId</code> (UC...)</p>
+              <p class="tileTitle"><strong>Fast fertig:</strong> </p>
+              <p class="tileMeta"></code> (UC...)</p>
             </div>
           </div>`;
         return;
