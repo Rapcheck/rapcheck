@@ -168,6 +168,26 @@ kurz, schnell und direkt aus der Deutschrap Szene.
 </footer>
 
 </div>
+  <script>
+  // UX-Hürde: Rechtsklick/Drag/Markieren blocken
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+  document.addEventListener("dragstart", (e) => e.preventDefault());
+  document.addEventListener("selectstart", (e) => e.preventDefault());
+
+  // UX-Hürde: gängige Shortcuts blocken
+  document.addEventListener("keydown", (e) => {
+    const k = (e.key || "").toLowerCase();
+    const ctrl = e.ctrlKey || e.metaKey;
+
+    if (
+      (ctrl && ["c","u","s","p"].includes(k)) ||        // copy, view source, save, print
+      (ctrl && e.shiftKey && ["i","j","c"].includes(k)) || // devtools combos
+      k === "f12"
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
 
 </body>
 </html>
