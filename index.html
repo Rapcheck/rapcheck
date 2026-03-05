@@ -1,193 +1,360 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0c1a" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapcheck.de – Deutschrap & Rap News, Releases & Updates</title>
 
-<title>Rapcheck.de – Rap News & Releases</title>
+  <!-- Primary SEO -->
+  <meta name="description" content="Rapcheck.de liefert aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt aus der Szene." />
+  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Deutschrap Releases, Rapcheck, Rap Updates, Deutschrap" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://rapcheck.de/" />
 
-<meta name="description" content="Rapcheck.de liefert aktuelle Rap News, Releases und Updates aus der Deutschrap Szene.">
-<meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Rapcheck">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Rapcheck.de" />
+  <meta property="og:title" content="Rapcheck.de – Deutschrap & Rap News, Releases & Updates" />
+  <meta property="og:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt." />
+  <meta property="og:url" content="https://rapcheck.de/" />
+  <!-- Optional: Wenn du später ein OG-Bild (1200x630) hochlädst, nenn es og-image.jpg -->
+  <meta property="og:image" content="https://rapcheck.de/og-image.jpg" />
 
-<link rel="canonical" href="https://rapcheck.de">
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rapcheck.de – Deutschrap & Rap News, Releases & Updates" />
+  <meta name="twitter:description" content="Aktuelle Deutschrap & Rap News, Releases und Updates – kurz, schnell und direkt." />
+  <meta name="twitter:image" content="https://rapcheck.de/og-image.jpg" />
 
-<style>
+  <!-- Structured data (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Rapcheck.de",
+    "url":"https://rapcheck.de/",
+    "logo":"https://rapcheck.de/raplogo.png",
+    "sameAs":[
+      "https://www.youtube.com/@Rapcheck",
+      "https://instagram.com/rapcheck",
+      "https://tiktok.com/@rapcheck"
+    ]
+  }
+  </script>
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(120deg,#0c0c1a,#1a0000);
-color:white;
-}
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Rapcheck.de",
+    "url":"https://rapcheck.de/"
+  }
+  </script>
 
-.header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:30px;
-}
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:white;
 
-.logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
+      /* Rap Neon Background */
+      background:
+        radial-gradient(900px 600px at 15% 20%, rgba(255,42,42,0.25), transparent 55%),
+        radial-gradient(900px 600px at 85% 25%, rgba(139,92,246,0.22), transparent 55%),
+        linear-gradient(120deg,#0c0c1a,#120008);
 
-.logo img{
-height:60px;
-}
+      min-height:100vh;
+      overflow-x:hidden;
+    }
 
-.social a{
-margin-left:15px;
-text-decoration:none;
-color:white;
-padding:8px 14px;
-border:1px solid rgba(255,255,255,0.3);
-border-radius:20px;
-}
+    /* Mikro/Noten Pattern Overlay */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:0.55;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.12' stroke-width='2'%3E%3Cpath d='M70 165c20 0 32-10 32-24V80l80-20v60'/%3E%3Cpath d='M102 165c0 9-11 16-25 16s-25-7-25-16 11-16 25-16 25 7 25 16z'/%3E%3Cpath d='M182 120c0 9-11 16-25 16s-25-7-25-16 11-16 25-16 25 7 25 16z'/%3E%3Cpath d='M170 185v-52c0-7 5-12 12-12h8c7 0 12 5 12 12v52'/%3E%3Cpath d='M160 185h60'/%3E%3Cpath d='M185 121v-16'/%3E%3Cpath d='M175 105h20'/%3E%3C/g%3E%3C/svg%3E");
+      background-size:260px 260px;
+      mix-blend-mode:overlay;
+    }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px;
-}
+    .header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:26px 28px;
+      gap:16px;
+      position:relative;
+      z-index:1;
+    }
 
-.hero{
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-padding:40px;
-}
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
 
-.hero h1{
-font-size:40px;
-margin-bottom:20px;
-}
+    .logo img{
+      height:62px;
+      width:auto;
+      border-radius:12px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.16);
+      padding:6px;
+      user-select:none;
+      -webkit-user-drag:none;
+      pointer-events:none;
+    }
 
-.buttons a{
-display:inline-block;
-margin-right:10px;
-margin-top:20px;
-padding:12px 18px;
-border-radius:10px;
-background:#ff2a2a;
-color:white;
-text-decoration:none;
-}
+    .logo strong{
+      font-size:18px;
+      letter-spacing:0.2px;
+    }
 
-.cards{
-display:flex;
-gap:20px;
-margin-top:40px;
-flex-wrap:wrap;
-}
+    .logo small{
+      opacity:0.75;
+    }
 
-.card{
-flex:1;
-min-width:250px;
-background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:15px;
-}
+    .social a{
+      margin-left:10px;
+      text-decoration:none;
+      color:white;
+      padding:9px 14px;
+      border:1px solid rgba(255,255,255,0.22);
+      border-radius:999px;
+      background:rgba(0,0,0,0.18);
+      transition: transform .15s ease, background .15s ease;
+      display:inline-block;
+      font-size:13px;
+      position:relative;
+      z-index:1;
+    }
 
-footer{
-margin-top:60px;
-text-align:center;
-opacity:0.6;
-}
+    .social a:hover{
+      transform: translateY(-1px);
+      background:rgba(255,255,255,0.10);
+    }
 
-</style>
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 24px 56px;
+      position:relative;
+      z-index:1;
+    }
 
+    .hero{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.14);
+      border-radius:22px;
+      padding:38px 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1{
+      font-size:42px;
+      margin:0 0 14px;
+      letter-spacing:-0.5px;
+    }
+
+    .hero p{
+      margin:0;
+      opacity:0.9;
+      line-height:1.6;
+      max-width:70ch;
+    }
+
+    .buttons{
+      margin-top:22px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .buttons a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:14px;
+      color:white;
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,0.16);
+      background:rgba(255,255,255,0.06);
+      transition: transform .15s ease, background .15s ease;
+      font-weight:700;
+      letter-spacing:0.1px;
+    }
+
+    .buttons a.primary{
+      background: linear-gradient(135deg, rgba(255,42,42,0.95), rgba(139,92,246,0.85));
+      border-color: rgba(255,255,255,0.14);
+    }
+
+    .buttons a:hover{
+      transform: translateY(-1px);
+      background:rgba(255,255,255,0.10);
+    }
+
+    .cards{
+      display:flex;
+      gap:16px;
+      margin-top:28px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      flex:1;
+      min-width:240px;
+      background:rgba(0,0,0,0.20);
+      border:1px solid rgba(255,255,255,0.14);
+      padding:18px;
+      border-radius:18px;
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:16px;
+    }
+
+    .card p{
+      margin:0;
+      opacity:0.85;
+      line-height:1.55;
+      font-size:13px;
+    }
+
+    /* SEO Content Block */
+    .seo{
+      margin-top:22px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.14);
+      border-radius:18px;
+      padding:22px;
+      line-height:1.65;
+    }
+    .seo h2{ margin:0 0 10px; font-size:22px; }
+    .seo h3{ margin:18px 0 8px; font-size:16px; opacity:0.95; }
+    .seo p{ margin:0 0 10px; opacity:0.9; }
+    .seo ul{ margin:10px 0 0 18px; opacity:0.9; }
+    .seo a{ color:#fff; text-decoration:underline; }
+
+    footer{
+      margin-top:22px;
+      text-align:center;
+      opacity:0.65;
+      font-size:12px;
+    }
+
+    @media (max-width: 760px){
+      .header{flex-direction:column; align-items:flex-start}
+      .hero h1{font-size:32px}
+    }
+  </style>
 </head>
 
 <body>
+  <div class="header">
+    <div class="logo">
+      <!-- Logo liegt bei dir im Root: raplogo.png -->
+      <img src="raplogo.png" alt="Rapcheck Logo">
+      <div>
+        <strong>Rapcheck.de</strong><br>
+        <small>Deutschrap • Rap News • Releases • Updates</small>
+      </div>
+    </div>
 
-<div class="header">
+    <div class="social">
+      <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://instagram.com/rapcheck" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
 
-<div class="logo">
+  <div class="container">
+    <div class="hero">
+      <h1>Dein schneller Check für Rap.</h1>
+      <p>
+        Rapcheck.de bringt dir aktuelle <strong>Deutschrap</strong>- und <strong>Rap News</strong>, neue <strong>Releases</strong> und kurze Updates –
+        kompakt, schnell und direkt aus der Szene.
+      </p>
 
-<img src="raplogo.png" alt="Rapcheck Logo">
+      <div class="buttons">
+        <a class="primary" href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener">YouTube abonnieren</a>
+        <a href="https://instagram.com/rapcheck" target="_blank" rel="noopener">Instagram folgen</a>
+        <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener">TikTok folgen</a>
+      </div>
 
-<div>
-<strong>Rapcheck.de</strong><br>
-<small>Rap News • Releases • Updates</small>
-</div>
+      <div class="cards">
+        <div class="card">
+          <h3>News & Updates</h3>
+          <p>Kuratiert, schnell und verständlich – damit du direkt weißt, was abgeht.</p>
+        </div>
+        <div class="card">
+          <h3>Releases im Blick</h3>
+          <p>Neue Songs, Alben und Videos – kompakt zusammengefasst.</p>
+        </div>
+        <div class="card">
+          <h3>Community Fokus</h3>
+          <p>Du willst Themen vorschlagen? Schreib uns über Social Media.</p>
+        </div>
+      </div>
 
-</div>
+      <!-- SEO Mini-Content -->
+      <section class="seo">
+        <h2>Was ist Rapcheck.de?</h2>
+        <p>
+          Rapcheck.de ist deine Anlaufstelle für <strong>Deutschrap News</strong>, neue <strong>Releases</strong> und schnelle Updates aus der Rap-Szene.
+          Wir bündeln die wichtigsten Themen kompakt, damit du ohne Umwege informiert bleibst.
+        </p>
 
-<div class="social">
-<a href="https://youtube.com/@Rapcheck">YouTube</a>
-<a href="https://instagram.com/rapcheck">Instagram</a>
-<a href="https://tiktok.com/@rapcheck">TikTok</a>
-</div>
+        <h3>Was du hier findest</h3>
+        <ul>
+          <li><strong>Rap News:</strong> Entwicklungen, Trends und Diskussionen aus der Szene</li>
+          <li><strong>Releases:</strong> Neue Songs, Alben und Musikvideos – kurz zusammengefasst</li>
+          <li><strong>Social Updates:</strong> Highlights von YouTube, Instagram und TikTok</li>
+        </ul>
 
-</div>
+        <h3>Folge Rapcheck</h3>
+        <p>
+          Für die neuesten Inhalte folge uns auf
+          <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener">YouTube</a>,
+          <a href="https://instagram.com/rapcheck" target="_blank" rel="noopener">Instagram</a>
+          und <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener">TikTok</a>.
+        </p>
+      </section>
 
-<div class="container">
+      <footer>© <span id="year"></span> Rapcheck.de</footer>
+    </div>
+  </div>
 
-<div class="hero">
-
-<h1>Dein schneller Check für Rap.</h1>
-
-<p>
-Rapcheck.de bringt dir aktuelle Rap News, Releases und Updates –
-kurz, schnell und direkt aus der Deutschrap Szene.
-</p>
-
-<div class="buttons">
-<a href="https://youtube.com/@Rapcheck">YouTube abonnieren</a>
-<a href="https://instagram.com/rapcheck">Instagram folgen</a>
-<a href="https://tiktok.com/@rapcheck">TikTok folgen</a>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>News & Updates</h3>
-<p>Kuratiert, schnell und verständlich – damit du direkt weißt was abgeht.</p>
-</div>
-
-<div class="card">
-<h3>Releases im Blick</h3>
-<p>Neue Songs, Alben und Videos kompakt zusammengefasst.</p>
-</div>
-
-<div class="card">
-<h3>Community Fokus</h3>
-<p>Themenvorschläge oder News? Schreib uns über Social Media.</p>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-© 2026 Rapcheck.de
-
-</footer>
-
-</div>
   <script>
-  // UX-Hürde: Rechtsklick/Drag/Markieren blocken
-  document.addEventListener("contextmenu", (e) => e.preventDefault());
-  document.addEventListener("dragstart", (e) => e.preventDefault());
-  document.addEventListener("selectstart", (e) => e.preventDefault());
+    // Jahr automatisch
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // UX-Hürde: gängige Shortcuts blocken
-  document.addEventListener("keydown", (e) => {
-    const k = (e.key || "").toLowerCase();
-    const ctrl = e.ctrlKey || e.metaKey;
+    // UX-Hürde: Rechtsklick/Drag/Markieren blocken
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+    document.addEventListener("dragstart", (e) => e.preventDefault());
+    document.addEventListener("selectstart", (e) => e.preventDefault());
 
-    if (
-      (ctrl && ["c","u","s","p"].includes(k)) ||        // copy, view source, save, print
-      (ctrl && e.shiftKey && ["i","j","c"].includes(k)) || // devtools combos
-      k === "f12"
-    ) {
-      e.preventDefault();
-    }
-  });
-</script>
+    // UX-Hürde: gängige Shortcuts blocken
+    document.addEventListener("keydown", (e) => {
+      const k = (e.key || "").toLowerCase();
+      const ctrl = e.ctrlKey || e.metaKey;
 
+      if (
+        (ctrl && ["c","u","s","p"].includes(k)) ||            // copy, view source, save, print
+        (ctrl && e.shiftKey && ["i","j","c"].includes(k)) ||  // devtools combos
+        k === "f12"
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
