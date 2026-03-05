@@ -9,7 +9,7 @@
 
   <!-- Primary SEO -->
   <meta name="description" content="Rapcheck.de liefert aktuelle Deutschrap- und Rap News, Releases und Updates – als YouTube Shorts, kurz, schnell und direkt." />
-  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rap Releases, Deutschrap Releases, Rapcheck, YouTube Shorts, Rap Shorts, Deutschrap Updates" />
+  <meta name="keywords" content="Rap News, Deutschrap News, HipHop News, Rapcheck, YouTube Shorts, Rap Shorts, Deutschrap Updates" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://rapcheck.de/" />
 
@@ -181,7 +181,7 @@
       padding:20px;
     }
     .section h2{
-      margin:0 0 12px;
+      margin:0;
       font-size:18px;
       letter-spacing:-0.2px;
     }
@@ -210,7 +210,7 @@
     .seoText h3{margin:12px 0 6px; color:#fff; font-size:14px;}
     .seoText ul{margin:8px 0 0 18px;}
 
-    /* Carousel (YouTube Shorts) */
+    /* Carousel */
     .carouselHeader{
       display:flex;
       align-items:center;
@@ -286,7 +286,6 @@
 <body>
   <div class="header">
     <div class="logo">
-      <!-- Logo liegt bei dir im Root: raplogo.png -->
       <img src="raplogo.png" alt="Rapcheck Logo">
       <div>
         <strong>Rapcheck.de</strong><br>
@@ -306,7 +305,7 @@
       <h1>Dein schneller Check für Rap.</h1>
       <p>
         Rapcheck.de bringt dir aktuelle <strong>Deutschrap</strong>- und <strong>Rap News</strong>, neue <strong>Releases</strong> und kurze Updates –
-        kompakt, schnell und direkt aus der Szene. Die neuesten <strong>YouTube Shorts</strong> findest du direkt hier.
+        kompakt, schnell und direkt aus der Szene.
       </p>
 
       <div class="buttons">
@@ -330,7 +329,7 @@
         </div>
       </div>
 
-      <!-- YouTube Shorts Feed (auto) -->
+      <!-- YouTube Shorts Feed -->
       <div class="section" aria-label="Neueste YouTube Shorts">
         <div class="carouselHeader">
           <h2>Neueste Shorts</h2>
@@ -340,16 +339,7 @@
           </div>
         </div>
 
-        <p class="muted" style="margin-top:0;">
-          Deine neuesten Uploads werden automatisch geladen. Shorts werden bevorzugt angezeigt (wenn im Titel z.B. „Shorts/#shorts“ erkennbar ist).
-        </p>
-
         <div class="rail" id="rail" aria-label="Shorts Slider"></div>
-
-        <p class="muted" style="margin:12px 0 0;">
-          Mehr? Schau direkt auf dem Kanal vorbei:
-          <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">@Rapcheck</a>
-        </p>
       </div>
 
       <!-- SEO Accordion -->
@@ -371,14 +361,6 @@
               <li><strong>Releases:</strong> Neue Songs, Alben und Musikvideos – kurz zusammengefasst</li>
               <li><strong>YouTube Shorts:</strong> Die neuesten Updates direkt auf dieser Seite</li>
             </ul>
-
-            <h3>Folge Rapcheck</h3>
-            <p>
-              Für die neuesten Inhalte folge uns auf
-              <a href="https://www.youtube.com/@Rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">YouTube</a>,
-              <a href="https://instagram.com/rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Instagram</a>
-              und <a href="https://tiktok.com/@rapcheck" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">TikTok</a>.
-            </p>
           </div>
         </details>
       </div>
@@ -391,33 +373,33 @@
     // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // ===== YouTube feed (auto) =====
-    // Channel ID already set:
+    // ===== YouTube Shorts (RSS) via allorigins (CORS workaround) =====
     const YT_CHANNEL_ID = "UCdJUFxC2vb7xDAa5M-Mvi_A";
     const RSS_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=" + encodeURIComponent(YT_CHANNEL_ID);
 
-    // Public RSS->JSON helper to bypass CORS (simple setup, no API key).
-    const API = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS_URL) + "&count=25";
+    // allorigins raw proxy (returns the RSS XML)
+    const PROXY = "https://api.allorigins.win/raw?url=" + encodeURIComponent(RSS_URL);
 
     const rail = document.getElementById("rail");
     const btnLeft = document.getElementById("btnLeft");
     const btnRight = document.getElementById("btnRight");
 
     function esc(s){
-      return String(s||"").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+      return String(s||"").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
     }
 
-    function getYouTubeId(link){
+    function getYouTubeIdFromLink(link){
+      // Usually: https://www.youtube.com/watch?v=VIDEOID
       try{
         const u = new URL(link);
         return u.searchParams.get("v");
       }catch(e){ return null; }
     }
 
-    function looksLikeShort(item){
-      const title = (item.title || "").toLowerCase();
-      const link = (item.link || "").toLowerCase();
-      // Heuristic: #shorts / shorts keyword
+    function looksLikeShort(entry){
+      const title = (entry.title || "").toLowerCase();
+      const link = (entry.link || "").toLowerCase();
+      // Heuristic only (YouTube doesn't label Shorts in RSS reliably)
       return title.includes("#shorts") || title.includes("shorts") || link.includes("/shorts/");
     }
 
@@ -444,30 +426,45 @@
       `;
 
       try{
-        const res = await fetch(API, {cache:"no-store"});
-        const data = await res.json();
+        const res = await fetch(PROXY, {cache:"no-store"});
+        const xmlText = await res.text();
 
-        if (!data.items || !data.items.length){
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlText, "application/xml");
+
+        const entries = Array.from(xml.getElementsByTagName("entry")).slice(0, 25);
+
+        if (!entries.length){
           rail.innerHTML = `<div class="tile"><div class="tileBody"><p class="tileTitle">Keine Videos gefunden.</p></div></div>`;
           return;
         }
 
-        // Prefer shorts-like items first, then fill up with newest uploads
-        const items = data.items.slice(0, 25);
-        const shorts = items.filter(looksLikeShort);
-        const others = items.filter(i => !looksLikeShort(i));
+        const mapped = entries.map(e => {
+          const title = esc(e.getElementsByTagName("title")[0]?.textContent || "");
+          const link = e.getElementsByTagName("link")[0]?.getAttribute("href") || "";
+          const published = e.getElementsByTagName("published")[0]?.textContent || "";
+          const date = published ? new Date(published).toLocaleDateString("de-DE") : "";
 
+          const vid = getYouTubeIdFromLink(link);
+          const thumb = vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : "";
+          const href = link || (vid ? `https://www.youtube.com/watch?v=${vid}` : "#");
+
+          return { title, link: href, date, vid, thumb, isShort: looksLikeShort({title, link: href}) };
+        });
+
+        // Prefer shorts-like first (if detectable), then newest
+        const shorts = mapped.filter(x => x.isShort);
+        const others = mapped.filter(x => !x.isShort);
         const ordered = shorts.concat(others).slice(0, 12);
 
-        rail.innerHTML = ordered.map(item => {
-          const vid = getYouTubeId(item.link);
-          const title = esc(item.title);
-          const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString("de-DE") : "";
-          const thumb = item.thumbnail || (vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : "");
-          const href = vid ? `https://www.youtube.com/watch?v=${vid}` : item.link;
-
-          return buildTile({href, thumb, title, date});
-        }).join("");
+        rail.innerHTML = ordered.map(item =>
+          buildTile({
+            href: item.link,
+            thumb: item.thumb,
+            title: item.title,
+            date: item.date
+          })
+        ).join("");
 
       }catch(err){
         rail.innerHTML = `
