@@ -1,468 +1,251 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0c0c1a" />
 
-  <title>Rapcheck Shorts – Deutschrap News, Rap Updates & YouTube Shorts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Alle aktuellen YouTube Shorts von Rapcheck auf einer Seite. Deutschrap News, Rap Updates, Releases und kurze Video-Formate direkt im Überblick." />
-  <meta name="keywords" content="Rapcheck Shorts, YouTube Shorts Rap, Deutschrap News Shorts, Rap Updates, Rap Releases, HipHop Shorts, Rapcheck Videos" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://www.rapcheck.de/videos.html" />
+<title>Rapcheck Shorts – Rap News & Deutschrap Updates</title>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="de_DE" />
-  <meta property="og:site_name" content="Rapcheck.de" />
-  <meta property="og:title" content="Rapcheck Shorts – Deutschrap News, Rap Updates & YouTube Shorts" />
-  <meta property="og:description" content="Alle aktuellen YouTube Shorts von Rapcheck gesammelt auf einer Seite." />
-  <meta property="og:url" content="https://www.rapcheck.de/videos.html" />
-  <meta property="og:image" content="https://www.rapcheck.de/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+<meta name="description" content="Alle aktuellen Rapcheck YouTube Shorts auf einer Seite. Deutschrap News, Rap Updates und Releases im kurzen Videoformat.">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rapcheck Shorts – Deutschrap News, Rap Updates & YouTube Shorts" />
-  <meta name="twitter:description" content="Alle aktuellen YouTube Shorts von Rapcheck gesammelt auf einer Seite." />
-  <meta name="twitter:image" content="https://www.rapcheck.de/og-image.jpg" />
+<meta name="robots" content="index,follow">
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Rapcheck Shorts",
-    "url":"https://www.rapcheck.de/videos.html",
-    "description":"Übersicht über aktuelle YouTube Shorts von Rapcheck mit Rap News, Deutschrap Updates und Releases."
-  }
-  </script>
+<link rel="canonical" href="https://www.rapcheck.de/videos.html">
 
-  <style>
-    :root{
-      --card: rgba(255,255,255,0.06);
-      --line: rgba(255,255,255,0.14);
-      --muted: rgba(255,255,255,0.78);
-      --shadow: 0 24px 60px rgba(0,0,0,0.35);
-      --radius: 22px;
-    }
+<meta property="og:title" content="Rapcheck Shorts">
+<meta property="og:description" content="Aktuelle YouTube Shorts von Rapcheck zu Rap News und Deutschrap Updates.">
+<meta property="og:image" content="https://www.rapcheck.de/og-image.jpg">
+<meta property="og:url" content="https://www.rapcheck.de/videos.html">
+<meta property="og:type" content="website">
 
-    *{box-sizing:border-box}
+<style>
 
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      color:#fff;
-      background:
-        radial-gradient(900px 600px at 15% 20%, rgba(255,42,42,0.25), transparent 55%),
-        radial-gradient(900px 600px at 85% 25%, rgba(139,92,246,0.22), transparent 55%),
-        linear-gradient(120deg,#0c0c1a,#120008);
-      min-height:100vh;
-      overflow-x:hidden;
-    }
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+color:white;
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      opacity:0.55;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.12' stroke-width='2'%3E%3Cpath d='M70 165c20 0 32-10 32-24V80l80-20v60'/%3E%3Cpath d='M102 165c0 9-11 16-25 16s-25-7-25-16 11-16 25-16 25 7 25 16z'/%3E%3Cpath d='M182 120c0 9-11 16-25 16s-25-7-25-16 11-16 25-16 25 7 25 16z'/%3E%3Cpath d='M170 185v-52c0-7 5-12 12-12h8c7 0 12 5 12 12v52'/%3E%3Cpath d='M160 185h60'/%3E%3Cpath d='M185 121v-16'/%3E%3Cpath d='M175 105h20'/%3E%3C/g%3E%3C/svg%3E");
-      background-size:260px 260px;
-      mix-blend-mode:overlay;
-    }
+background:
+radial-gradient(circle at 20% 20%,rgba(255,50,50,0.25),transparent 40%),
+radial-gradient(circle at 80% 30%,rgba(150,80,255,0.25),transparent 40%),
+linear-gradient(120deg,#0b0b16,#14000a);
 
-    .container{
-      max-width:1280px;
-      margin:0 auto;
-      padding:28px 20px 60px;
-      position:relative;
-      z-index:1;
-    }
+}
 
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      margin-bottom:20px;
-      flex-wrap:wrap;
-    }
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px 20px 60px;
+}
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+flex-wrap:wrap;
+gap:10px;
+}
 
-    .brand img{
-      height:58px;
-      width:auto;
-      border-radius:12px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.16);
-      padding:6px;
-      user-select:none;
-      -webkit-user-drag:none;
-      pointer-events:none;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-    .brand strong{font-size:18px;}
-    .brand small{opacity:.75;}
+.logo img{
+height:55px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.15);
+padding:5px;
+}
 
-    .nav-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+.nav a{
+padding:10px 16px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.15);
+text-decoration:none;
+color:white;
+font-weight:600;
+background:rgba(255,255,255,0.06);
+}
 
-    .nav-actions a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:11px 16px;
-      border-radius:14px;
-      text-decoration:none;
-      color:#fff;
-      font-weight:700;
-      border:1px solid rgba(255,255,255,0.16);
-      background:rgba(255,255,255,0.06);
-      transition: transform .15s ease, background .15s ease;
-    }
+.hero{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.12);
+border-radius:18px;
+padding:28px;
+margin-bottom:18px;
+}
 
-    .nav-actions a:hover{
-      transform:translateY(-1px);
-      background:rgba(255,255,255,0.10);
-    }
+.hero h1{
+margin:0 0 10px;
+font-size:38px;
+}
 
-    .nav-actions a.primary{
-      background: linear-gradient(135deg, rgba(255,42,42,0.95), rgba(139,92,246,0.85));
-      border-color: rgba(255,255,255,0.14);
-    }
+.hero p{
+opacity:0.85;
+line-height:1.7;
+max-width:720px;
+}
 
-    .hero{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:30px 24px;
-      box-shadow:var(--shadow);
-      backdrop-filter: blur(8px);
-      margin-bottom:18px;
-    }
+.video-grid{
+margin-top:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
 
-    .hero h1{
-      margin:0 0 10px;
-      font-size:40px;
-      letter-spacing:-0.5px;
-    }
+.video{
+border-radius:20px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.15);
+background:black;
+}
 
-    .hero p{
-      margin:0;
-      line-height:1.7;
-      color:var(--muted);
-      max-width:75ch;
-    }
+.video iframe{
+width:100%;
+aspect-ratio:9/16;
+border:0;
+}
 
-    .info-bar{
-      margin-top:18px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
+.more{
+margin-top:25px;
+text-align:center;
+}
 
-    .info-pill{
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.12);
-      font-size:13px;
-      color:#fff;
-    }
+.more a{
+padding:14px 22px;
+border-radius:14px;
+background:linear-gradient(135deg,#ff2a2a,#8b5cf6);
+text-decoration:none;
+color:white;
+font-weight:700;
+}
 
-    .section{
-      background:rgba(255,255,255,0.05);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:20px;
-      margin-top:18px;
-    }
+footer{
+margin-top:25px;
+text-align:center;
+opacity:0.6;
+font-size:12px;
+}
 
-    .section h2{
-      margin:0 0 12px;
-      font-size:22px;
-      letter-spacing:-0.3px;
-    }
+@media(max-width:900px){
+.video-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
 
-    .section p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.7;
-    }
+@media(max-width:600px){
+.video-grid{
+grid-template-columns:1fr;
+}
 
-    .video-grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:18px;
-    }
+.hero h1{
+font-size:28px;
+}
+}
 
-    .video-card{
-      background:rgba(0,0,0,0.20);
-      border:1px solid var(--line);
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition: transform .18s ease, border-color .18s ease;
-    }
-
-    .video-card:hover{
-      transform:translateY(-2px);
-      border-color:rgba(255,255,255,0.22);
-    }
-
-    .video-card iframe{
-      display:block;
-      width:100%;
-      aspect-ratio:9/16;
-      border:0;
-      background:#000;
-    }
-
-    .video-info{
-      padding:14px;
-    }
-
-    .video-info h3{
-      margin:0 0 6px;
-      font-size:15px;
-      line-height:1.4;
-      color:#fff;
-    }
-
-    .video-info p{
-      margin:0;
-      font-size:13px;
-      line-height:1.6;
-      color:var(--muted);
-    }
-
-    .cta-box{
-      margin-top:22px;
-      display:flex;
-      justify-content:center;
-    }
-
-    .cta-box a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:13px 20px;
-      border-radius:14px;
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      border:1px solid rgba(255,255,255,0.16);
-      background: linear-gradient(135deg, rgba(255,42,42,0.95), rgba(139,92,246,0.85));
-    }
-
-    .seo-box{
-      margin-top:18px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:20px;
-      line-height:1.75;
-      color:var(--muted);
-    }
-
-    .seo-box h3{
-      color:#fff;
-      margin:0 0 10px;
-      font-size:20px;
-    }
-
-    .seo-box ul{
-      margin:10px 0 0 18px;
-      padding:0;
-    }
-
-    footer{
-      margin-top:20px;
-      text-align:center;
-      opacity:0.65;
-      font-size:12px;
-    }
-
-    @media (max-width: 1024px){
-      .video-grid{
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 680px){
-      .video-grid{
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1{
-        font-size:30px;
-      }
-
-      .container{
-        padding:20px 14px 44px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <img src="raplogo.png" alt="Rapcheck Logo">
-        <div>
-          <strong>Rapcheck.de</strong><br>
-          <small>YouTube Shorts • Rap News • Deutschrap Updates</small>
-        </div>
-      </div>
 
-      <div class="nav-actions">
-        <a href="https://www.rapcheck.de/">← Startseite</a>
-        <a class="primary" href="https://www.youtube.com/playlist?list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF" target="_blank" rel="noopener">Shorts Playlist öffnen</a>
-      </div>
-    </div>
+<div class="container">
 
-    <section class="hero">
-      <h1>Rapcheck Shorts</h1>
-      <p>
-        Auf dieser Seite findest du die neuesten <strong>YouTube Shorts von Rapcheck</strong> gesammelt an einem Ort.
-        So können Besucher direkt mehrere kurze Clips zu <strong>Rap News</strong>, <strong>Deutschrap Updates</strong>, <strong>Releases</strong> und aktuellen Themen aus der Rap-Szene ansehen.
-      </p>
+<div class="topbar">
 
-      <div class="info-bar">
-        <div class="info-pill">Nur Shorts</div>
-        <div class="info-pill">Keine Long Videos</div>
-        <div class="info-pill">SEO-optimierte Unterseite</div>
-        <div class="info-pill">Mobile & Desktop optimiert</div>
-      </div>
-    </section>
+<div class="logo">
+<img src="raplogo.png">
+<div>
+<strong>Rapcheck.de</strong><br>
+<small>YouTube Shorts</small>
+</div>
+</div>
 
-    <section class="section">
-      <h2>Aktuelle Shorts von Rapcheck</h2>
-      <p>
-        Je weiter du nach unten scrollst, desto mehr Shorts werden angezeigt. Dadurch bleibt die Seite übersichtlich, schnell und gleichzeitig deutlich nützlicher für Besucher und für Google.
-      </p>
+<div class="nav">
+<a href="https://www.rapcheck.de/">Startseite</a>
+</div>
 
-      <div class="video-grid">
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=1" title="Rapcheck Short 1" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 1</h3>
-            <p>Kurze Rap Updates, Deutschrap News und aktuelle Themen direkt im Short-Format.</p>
-          </div>
-        </article>
+</div>
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=2" title="Rapcheck Short 2" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 2</h3>
-            <p>Aktuelle Rap News und neue Entwicklungen aus der Szene kompakt zusammengefasst.</p>
-          </div>
-        </article>
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=3" title="Rapcheck Short 3" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 3</h3>
-            <p>Rapcheck Shorts mit schnellen Infos zu Releases, Trends und Rap Updates.</p>
-          </div>
-        </article>
+<div class="hero">
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=4" title="Rapcheck Short 4" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 4</h3>
-            <p>Deutschrap, HipHop und Szene-News im kompakten Videoformat von Rapcheck.</p>
-          </div>
-        </article>
+<h1>Rapcheck Shorts</h1>
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=5" title="Rapcheck Short 5" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 5</h3>
-            <p>Kurze und direkte Rap News Videos für alle, die schnell informiert bleiben wollen.</p>
-          </div>
-        </article>
+<p>
+Hier findest du aktuelle <strong>YouTube Shorts von Rapcheck</strong> zu Rap News,
+Deutschrap Updates, neuen Releases und Themen aus der Rap Szene.
+Die Videos sind direkt auf dieser Seite eingebunden, damit du mehrere Shorts
+hintereinander ansehen kannst.
+</p>
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=6" title="Rapcheck Short 6" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 6</h3>
-            <p>Mehr Rapcheck Shorts zu aktuellen Themen, Releases und Rap-Szene Entwicklungen.</p>
-          </div>
-        </article>
+</div>
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=7" title="Rapcheck Short 7" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 7</h3>
-            <p>Shorts mit schnellen Deutschrap Updates, News und relevanten Szene-Momenten.</p>
-          </div>
-        </article>
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=8" title="Rapcheck Short 8" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 8</h3>
-            <p>Weitere aktuelle Rapcheck Videos im Short-Format für mobile und Desktop Nutzer.</p>
-          </div>
-        </article>
+<div class="video-grid">
 
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=9" title="Rapcheck Short 9" allowfullscreen loading="lazy"></iframe>
-          <div class="video-info">
-            <h3>Rapcheck Short 9</h3>
-            <p>Rap News, Releases und Deutschrap Themen direkt gesammelt auf Rapcheck.de.</p>
-          </div>
-        </article>
-      </div>
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=1" loading="lazy" allowfullscreen></iframe>
+</div>
 
-      <div class="cta-box">
-        <a href="https://www.youtube.com/playlist?list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF" target="_blank" rel="noopener">Alle Shorts auf YouTube ansehen</a>
-      </div>
-    </section>
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=2" loading="lazy" allowfullscreen></iframe>
+</div>
 
-    <section class="seo-box">
-      <h3>Warum diese Shorts-Seite für Rapcheck sinnvoll ist</h3>
-      Diese Unterseite bündelt mehrere aktuelle <strong>YouTube Shorts</strong> von Rapcheck an einem Ort. Das verbessert die Nutzererfahrung, weil Besucher direkt mehrere kurze Videos ansehen können, ohne die Website verlassen zu müssen. Gleichzeitig hilft die Seite bei der Suchmaschinenoptimierung, weil zusätzliche relevante Inhalte für Begriffe wie <strong>Rap News</strong>, <strong>Deutschrap News</strong>, <strong>Rap Updates</strong>, <strong>Releases</strong> und <strong>YouTube Shorts</strong> vorhanden sind.
-      <ul>
-        <li>Nur Shorts – keine Long Videos</li>
-        <li>Bessere Übersicht für Besucher</li>
-        <li>Mehr relevanter SEO-Content für Google</li>
-        <li>Stark optimiert für Handy und Desktop</li>
-      </ul>
-    </section>
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=3" loading="lazy" allowfullscreen></iframe>
+</div>
 
-    <footer>© <span id="year"></span> Rapcheck.de</footer>
-  </div>
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=4" loading="lazy" allowfullscreen></iframe>
+</div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=5" loading="lazy" allowfullscreen></iframe>
+</div>
 
-    document.addEventListener("contextmenu", (e) => e.preventDefault());
-    document.addEventListener("dragstart", (e) => e.preventDefault());
-    document.addEventListener("selectstart", (e) => e.preventDefault());
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=6" loading="lazy" allowfullscreen></iframe>
+</div>
 
-    document.addEventListener("keydown", (e) => {
-      const k = (e.key || "").toLowerCase();
-      const ctrl = e.ctrlKey || e.metaKey;
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=7" loading="lazy" allowfullscreen></iframe>
+</div>
 
-      if (
-        (ctrl && ["c","u","s","p"].includes(k)) ||
-        (ctrl && e.shiftKey && ["i","j","c"].includes(k)) ||
-        k === "f12"
-      ) {
-        e.preventDefault();
-      }
-    });
-  </script>
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=8" loading="lazy" allowfullscreen></iframe>
+</div>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF&index=9" loading="lazy" allowfullscreen></iframe>
+</div>
+
+</div>
+
+<div class="more">
+
+<a href="https://www.youtube.com/playlist?list=PLm47oFF5E1QjA9c4DoEDtqCujkPy6z-qF" target="_blank">
+Alle Shorts auf YouTube ansehen
+</a>
+
+</div>
+
+<footer>
+© <span id="year"></span> Rapcheck.de
+</footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("dragstart",e=>e.preventDefault());
+document.addEventListener("selectstart",e=>e.preventDefault());
+</script>
+
 </body>
 </html>
